@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../css/home.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="page-wrapper" dir="ltr">
+      <header>
+        <div class="popup-container" id="popup">
+          <form class="popup-msg">
+            <h3>Contact us :)</h3>
+            <label for="username">Name</label>
+            <input id="username" name="username" placeholder="Your name" />
+            <label for="tel">Phone</label>
+            <input
+              type="tel"
+              name="tel"
+              id="tel"
+              placeholder="050-000-0000"
+              pattern="^\d{3}-\d{3}-\d{4}$"
+            />
+            <label for="area">Content</label>
+            <textarea
+              id="area"
+              name="area"
+              rows="10"
+              cols="50"
+              placeholder="Your message"
+            ></textarea>
+            <div class="btns-wrapper">
+              <button type="submit" id="sendBtn">Send</button>
+              <button type="button" id="closeBtn">Close</button>
+            </div>
+          </form>
+        </div>
+        <div class="message-img" id="msgBtn">
+          <img src="../assets/icons/email.png" alt="message" />
+        </div>
+        <div class="profile-img">
+          <img
+            id="openMenu"
+            onclick="toggleMenu()"
+            src="../assets/images/default-user.png"
+            alt="profile"
+          />
+        </div>
+      </header>
+      <div class="side-menu" id="sideMenu">
+        <div class="header-menu">
+          <div class="user-info-menu">
+            <img
+              id="userImgMenu"
+              src="../assets/images/default-user.png"
+              alt="profile"
+            />
+            <p id="userName"></p>
+          </div>
+          <div class="close-icon">
+            <img
+              onclick="toggleMenu()"
+              src="../assets/icons/close.png"
+              alt="Close icon"
+              id="closeMenu"
+            />
+          </div>
+        </div>
+        <ul class="menu" id="menu"></ul>
+        <div class="log-out" id="logOutLink">
+          <p>Log Out</p>
+        </div>
+      </div>
+      <main>
+        <div class="main-info">
+          <div class="img-wrapper"></div>
+          <div class="user-in">
+            <h1 id="titleByTime"></h1>
+            <p id="time" class="time">time</p>
+            <p id="summary">Summary of your activity</p>
+            <div class="income-expens-wrapper">
+              <div class="incomes-wrapper">
+                <p class="incomes-title">
+                  Incomes
+                  <img
+                    src="../assets/icons/green-arrow.png"
+                    alt="Green arrow"
+                  />
+                </p>
+                <p id="incomes"></p>
+              </div>
+              <div class="gap"></div>
+              <div class="expenses-wrapper">
+                <p class="expenses-title">
+                  Expenses
+                  <img src="../assets/icons/red-arrow.png" alt="Green arrow" />
+                </p>
+                <p id="expenses"></p>
+              </div>
+            </div>
+            <img
+              class="credit-card"
+              src="../assets/images/credit-card.png"
+              id="creditCard"
+              alt="Credit-card"
+            />
+          </div>
+          <div class="amount-wrapper">
+            <p id="previous"></p>
+            <p id="future"></p>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <p>By Noa Yarin & Ron Omer</p>
+      </footer>
+    </div>
+  </body>
+  <script src="../js/user.js"></script>
+  <script src="../js/helpers.js"></script>
+  <script src="../js/home.js"></script>
+</html>

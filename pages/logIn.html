@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/loginAndSignIn.css" />
+  </head>
+  <body>
+    <div class="page-wrapper" dir="ltr">
+      <header></header>
+      <main>
+        <div class="log-box">
+          <div>
+            <h1>Log In</h1>
+          </div>
+          <div>
+            <form id="login" onsubmit="logIn(event)">
+              <div>
+                <label for="username">Username</label>
+                <br />
+                <input type="text" name="username" id="username" />
+              </div>
+              <div>
+                <label for="password">Password</label>
+                <br />
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  maxlength="8"
+                />
+              </div>
+              <div id="signIn" class="btn">
+                <button type="submit" id="signInBtn" class="logInBtn">
+                  Login
+                </button>
+              </div>
+              <div id="error"></div>
+            </form>
+          </div>
+          <div class="user-account">
+            <p>Don't have an account? <a href="signUp.html">Sign up</a></p>
+          </div>
+        </div>
+      </main>
+      <footer></footer>
+    </div>
+    <script src="../js/user.js"></script>
+    <script src="../js/logIn.js"></script>
+  </body>
+</html>

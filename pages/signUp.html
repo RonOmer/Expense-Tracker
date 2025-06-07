@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../css/loginAndSignIn.css" />
+  </head>
+  <body>
+    <div class="page-wrapper" dir="ltr">
+      <header></header>
+      <main>
+        <div class="log-box">
+          <div>
+            <h1>Sign Up</h1>
+          </div>
+          <div>
+            <form id="signUpForm" onsubmit="signUp(event)">
+              <div>
+                <label for="username">Username</label>
+                <br />
+                <input type="text" name="username" id="username" />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <br />
+                <input type="email" name="email" id="email" />
+              </div>
+              <div>
+                <label for="password">Password</label>
+                <br />
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  maxlength="8"
+                />
+              </div>
+              <div>
+                <label for="confirmPassword">Confirm Password</label>
+                <br />
+                <input
+                  type="password"
+                  name="confirmPassword"
+                  id="confirmPassword"
+                  maxlength="8"
+                />
+              </div>
+              <div>
+                <label for="birthDate">Birth Date</label>
+                <br />
+                <input type="date" name="birthDate" id="birthDate" />
+              </div>
+              <div>
+                <label for="credit-card">Credit Card Number:</label>
+                <input
+                  name="credit-card"
+                  type="text"
+                  id="creditCard"
+                  maxlength="19"
+                  placeholder="1234-5678-9012-3456"
+                  oninput="formatCreditCard(this)"
+                />
+              </div>
+              <div>
+                <label for="Exp-date">Expiration Date:</label>
+                <input type="month" id="expDate" name="Exp-date" />
+              </div>
+              <div>
+                <label for="CVV">CVV:</label>
+                <input
+                  type="text"
+                  id="cvv"
+                  name="CVV"
+                  maxlength="3"
+                  pattern="\d{3}"
+                />
+              </div>
+              <div id="submit" class="btn">
+                <button type="submit" id="signUpBtn" class="signUpBtn">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="user-account">
+            <p>Already have an account? <a href="login.html">Log In</a></p>
+          </div>
+        </div>
+      </main>
+      <footer></footer>
+    </div>
+    <script src="../js/user.js"></script>
+    <script src="../js/signUp.js"></script>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../css/settings.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings</title>
+  </head>
+  <body>
+    <div class="page-wrapper" dir="ltr">
+      <header>
+        <div class="popup-container" id="popup">
+          <form class="popup-msg">
+            <h3>Contact us :)</h3>
+            <label for="username">Name</label>
+            <input id="username" name="username" placeholder="Your name" />
+            <label for="tel">Phone</label>
+            <input
+              type="tel"
+              name="tel"
+              id="tel"
+              placeholder="050-000-0000"
+              pattern="^\d{3}-\d{3}-\d{4}$"
+            />
+            <label for="area">Content</label>
+            <textarea
+              id="area"
+              name="area"
+              rows="10"
+              cols="50"
+              placeholder="Your message"
+            ></textarea>
+            <div class="btns-wrapper">
+              <button type="submit" id="sendBtn">Send</button>
+              <button type="button" id="closeBtn">Close</button>
+            </div>
+          </form>
+        </div>
+        <div class="message-img" id="msgBtn">
+          <img src="../assets/icons/email.png" alt="message" />
+        </div>
+        <div class="profile-img">
+          <img
+            id="openMenu"
+            onclick="toggleMenu()"
+            src="../assets/images/default-user.png"
+            alt="profile"
+          />
+        </div>
+      </header>
+      <div class="side-menu" id="sideMenu">
+        <div class="header-menu">
+          <div class="user-info-menu">
+            <img
+              src="../assets/images/default-user.png"
+              alt="profile"
+              id="userImgMenu"
+            />
+            <p id="userName"></p>
+          </div>
+          <div class="close-icon">
+            <img
+              onclick="toggleMenu()"
+              src="../assets/icons/close.png"
+              alt="Close icon"
+              id="closeMenu"
+            />
+          </div>
+        </div>
+        <ul class="menu" id="menu"></ul>
+        <div class="log-out" id="logOutLink">
+          <p>Log Out</p>
+        </div>
+      </div>
+      <main>
+        <div class="log-box">
+          <div>
+            <h1>Settings</h1>
+          </div>
+          <div>
+            <form id="changeSettings" onsubmit="applyChanges(event)">
+              <div id="changes">
+                <div>
+                  <label for="username">Username</label>
+                  <br />
+                  <input type="text" name="username" id="usernameInput" />
+                </div>
+                <div>
+                  <label for="password">Password</label>
+                  <br />
+                  <input
+                    type="text"
+                    name="password"
+                    id="password"
+                    maxlength="8"
+                  />
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <br />
+                  <input type="email" name="email" id="email" />
+                </div>
+              </div>
+              <div>
+                <label for="imageUpload">Add profile picture</label>
+                <input type="file" id="imageUpload" accept="image/*" />
+              </div>
+              <h2>Changing billing date</h2>
+              <div>
+                <label for="cards">Select card:</label>
+                <select id="cards" name="cards"></select>
+              </div>
+              <div>
+                <p id="currBillingDate">Current billing date:</p>
+                <label for="dates">Select new billing date</label>
+                <select id="dates" name="dates"></select>
+              </div>
+              <div id="apply" class="btns">
+                <button type="submit" class="applyBtn">Apply changes</button>
+              </div>
+            </form>
+            <form id="addCard" onsubmit="addCard(event)">
+              <h2>Add new credit card</h2>
+              <div>
+                <label for="credit-card">Credit Card Number:</label>
+                <br />
+                <input
+                  name="credit-card"
+                  type="text"
+                  id="creditCard"
+                  maxlength="19"
+                  placeholder="1234-5678-9012-3456"
+                  oninput="formatCreditCard(this)"
+                />
+              </div>
+              <div>
+                <label for="Exp-date">Expiration Date:</label>
+                <br />
+                <input type="month" id="expDate" name="Exp-date" />
+              </div>
+              <div>
+                <label for="CVV">CVV:</label>
+                <br />
+                <input
+                  type="text"
+                  id="cvv"
+                  name="CVV"
+                  maxlength="3"
+                  pattern="\d{3}"
+                />
+              </div>
+              <div id="add-card" class="btns">
+                <button type="submit" class="addCardBtn">Add card</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <p>By Noa Yarin & Ron Omer</p>
+      </footer>
+    </div>
+  </body>
+  <script src="../js/user.js"></script>
+  <script src="../js/helpers.js"></script>
+  <script src="../js/signUp.js"></script>
+  <script src="../js/setting.js"></script>
+</html>

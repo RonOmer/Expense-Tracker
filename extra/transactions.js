@@ -1,0 +1,98 @@
+let arr = [
+  {
+    Date: "01/01/2024",
+    "Business Name": "Starbucks",
+    Category: "Food & Beverage",
+    Amount: "5.75",
+  },
+  {
+    Date: "02/01/2024",
+    "Business Name": "Amazon",
+    Category: "Retail & Shopping",
+    Amount: "52.99",
+  },
+  {
+    Date: "03/01/2024",
+    "Business Name": "Dunkin' Donuts",
+    Category: "Food & Beverage",
+    Amount: "4.5",
+  },
+  {
+    Date: "04/01/2024",
+    "Business Name": "Walmart",
+    Category: "Retail & Shopping",
+    Amount: "23.99",
+  },
+  {
+    Date: "05/01/2024",
+    "Business Name": "McDonald's",
+    Category: "Food & Beverage",
+    Amount: "8.99",
+  },
+  {
+    Date: "06/01/2024",
+    "Business Name": "Apple",
+    Category: "Technology",
+    Amount: "1200.0",
+  },
+  {
+    Date: "07/01/2024",
+    "Business Name": "Target",
+    Category: "Retail & Shopping",
+    Amount: "34.5",
+  },
+  {
+    Date: "08/01/2024",
+    "Business Name": "Netflix",
+    Category: "Entertainment",
+    Amount: "15.99",
+  },
+  {
+    Date: "09/01/2024",
+    "Business Name": "Costco",
+    Category: "Retail & Shopping",
+    Amount: "75.25",
+  },
+  {
+    Date: "10/01/2024",
+    "Business Name": "Uber",
+    Category: "Transportation",
+    Amount: "13.0",
+  },
+  {
+    Date: "11/01/2024",
+    "Business Name": "Best Buy",
+    Category: "Technology",
+    Amount: "299.99",
+  },
+  {
+    Date: "12/01/2024",
+    "Business Name": "H&M",
+    Category: "Clothing & Accessories",
+    Amount: "45.0",
+  },
+  {
+    Date: "13/01/2024",
+    "Business Name": "Spotify",
+    Category: "Entertainment",
+    Amount: "9.99",
+  },
+  {
+    Date: "07/01/2024",
+    "Business Name": "Home Depot",
+    Category: "Home Improvement",
+    Amount: "120.50",
+  },
+  {
+    Date: "01/01/2025",
+    "Business Name": "Google",
+    Category: "Technology",
+    Amount: "500.0",
+  },
+  {
+    Date: "07/01/2024",
+    "Business Name": "IKEA",
+    Category: "Furniture",
+    Amount: "250.0",
+  },
+];

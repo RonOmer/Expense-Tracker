@@ -1,0 +1,230 @@
+body {
+  font-family: sans-serif;
+  font-size: 1em;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-wrapper {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: 15vh 1fr 15vh;
+  height: 100%;
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #388fbb;
+}
+
+.message-img img,
+.close-icon img,
+.user-info-menu img {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+}
+
+.profile-img img,
+.user-info-menu img {
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.close-icon img:hover {
+  transform: scale(0.8);
+}
+
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-msg {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #2af8d8;
+  padding: 10px;
+  width: 50%;
+  border-radius: 10px;
+  overflow: auto;
+  font-size: 1em;
+}
+
+.popup-msg h3 {
+  text-align: center;
+}
+
+.btns-wrapper {
+  text-align: center;
+  padding: 10px;
+}
+
+.log-box h1 {
+  text-align: center;
+}
+
+.log-box {
+  max-width: 30%;
+  border: 2px solid #388fbb;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.btns-wrapper button {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+p {
+  margin-left: 10px;
+}
+
+input {
+  outline: none;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  border: none;
+  border-bottom: 1px solid black;
+  width: 100%;
+  text-align: left;
+}
+
+.btns-wrapper button:hover {
+  background-color: #388fbb;
+}
+
+#dates {
+  position: relative;
+  overflow: visible;
+}
+label {
+  text-align: left;
+  margin: 5px 5px;
+}
+
+main {
+  grid-area: main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-menu {
+  display: none;
+  top: 0;
+  right: 0;
+  position: absolute;
+  background-color: #388fbb;
+  border: 2px solid black;
+  padding: 10px;
+  width: fit-content;
+  height: auto;
+  border-radius: 10px;
+}
+
+.charges-table {
+  width: 50vw;
+  border-collapse: collapse;
+  border: 2px solid black;
+}
+
+.user-info-menu,
+.header-menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.user-info-menu {
+  height: 30px;
+}
+
+.menu {
+  padding: 10px;
+  list-style-type: none;
+}
+
+.menu > li {
+  padding: 5px;
+}
+
+.menu > li a {
+  color: black;
+  text-decoration: none;
+}
+
+.menu > li a:hover {
+  color: white;
+}
+
+.showMenu {
+  display: block;
+}
+
+.log-out p {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #388fbb;
+  text-align: center;
+  padding: 25px;
+}
+
+.addCardBtn,
+.applyBtn {
+  margin-top: 5px;
+  justify-content: center;
+  background-color: #388fbb;
+  color: white;
+  border: none;
+  width: 100px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btns {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.addCardBtn:hover,
+.applyBtn:hover {
+  background-color: #1f5f7a;
+}
+
+@media screen and (max-width: 850px) {
+  body {
+    font-size: 1em;
+  }
+}
